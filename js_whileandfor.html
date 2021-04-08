@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While and For</title>  
+    <script type="text/javascript">
+        /*
+        while(判斷){
+            判斷的結果是true則執行大括號內的程式碼。
+            執行完畢回到上方while的位置做判斷直到判斷結果為false才跳離整個迴圈結構
+        }
+        */
+        var n=0;
+        while(n<=50){
+            n++;
+        }
+        alert(n);
+
+        var sum=0;
+        var i=1;
+        while(i<=100){
+            sum=sum+i;
+            // sum+=i
+            i++;
+        }
+        alert(sum);
+        // 迴圈一直都是true不斷執行時會形成無窮迴圈
+
+        /*
+        for(初始區塊;判斷;迴圈區塊){
+            判斷概念跟while一樣,留意初始區塊跟迴圈區塊的執行時機
+        }
+        */
+
+        var sum=0;
+        for(var i=1;i<=100;i++){
+            // 初始區塊只有在第一次進入迴圈時會執行
+            // 迴圈區塊是在中間判斷布林值時往後執行的程式碼,執行完成後會不斷在判斷式與迴圈區塊不斷重複執行直到判斷結果為false
+            // 這邊的i可以稱為控制變數
+            // 初始區塊相當於寫在for前面的控制變數
+            // 迴圈區塊相當於寫在for內的控制變數
+            sum=sum+i;
+            // sum+=i
+        }
+        alert(sum);
+
+        // break;強制跳出迴圈,continue;強制回到上一個迴圈執行下一次的迴圈
+
+        var n=0;
+        while(n<=100){
+            if(n==50){
+                break;
+            }
+            n++;
+        }
+        alert(n);
+
+        var x=0;
+        for(var n=0;n<=100;n++){
+            if(n%4==0){
+                // %為取餘數
+                continue;
+            }
+            x++;
+        }
+        alert(x);
+        // 此程式執行結果為x=75,因為if n可以被4整除就直接強制拉回for迴圈執行,跳過了x++的程式碼
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

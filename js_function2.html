@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function2</title>
+    <script type="text/javascript">
+    // 函式的第二種寫法以變數的方式宣告函式
+
+
+    function add(n1,n2){
+        alert(n1+n2);
+    }
+
+    var add=function(n1,n2){
+        alert(n1+n2);
+        // 將函式的名稱作為變數當開頭等於function(){大括號內放函式本體的程式碼};結尾要放分號
+    };
+    // 把函式放進變數中,把資料放進變數中,所以函數是一種資料
+    add(31,15);
+
+    var test=add;
+    // 把add這個函數放進test這個變數中
+    test(10,20);
+    // test一樣可以呼叫出add這個函式
+
+    var x=3;
+    x="String";
+    x=function(){alert("Hello World");};
+    x();
+    // 以上是x這個變數被裝進了什麼資料類型,分別為數字,字串,函式
+    // 先分辨變數中的資料類型再對變數進行對應的處理
+
+    // 函式創造新的名稱空間
+    var y=3;
+    y=5;
+    // var為建立變數,第二次的y是把新的資料覆蓋進x這個變數當中,寫兩次var y會造成混亂建立了兩個相同的變數
+
+    function test2(){
+        // 函式內的區塊是一個新的空間,一個可以放入變數的新空間函式私有的空間倉庫,跟函式外的空間分開
+        var y=5;
+        alert(x+y);
+        // 系統看見變數會先搜尋函式內部是否有宣告過該變數,如果沒有會往函式外的空間找出該變數
+        // 函式內外可以有重複的變數,系統會先找函式內部的變數做運算
+    }
+    alert(x);
+        //  程式碼寫在函式外,會先找函式外的變數,但找不到不會往函式內找會往外找,如果已經是在最外層程式會運行失敗
+
+    
+    // 函式外的空間叫做全域空間其中變數稱為全域變數,函式內的空間稱為區域空間其中變數稱為區域變數
+    // 外部的程式碼不能使用內部的變數,內部的程式碼會往外部抓外部的變數
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

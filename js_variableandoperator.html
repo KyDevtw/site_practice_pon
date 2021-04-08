@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable and Operator</title>
+    <script type="text/javascript">
+    // 單行註解
+
+    /*
+        多行註解
+    */
+
+    //資料有以下種類
+    //數字 
+    15, 15.555
+    //字串 
+    "單引號或雙引號包裹字串"
+    //布林值 
+    true;
+    false;
+    //物件
+
+    //變數
+    //變數宣告 
+    var x;
+    x=15;
+    //用var宣告變數 空格 變數名稱，用等號將右邊的值放入左邊的變數
+    alert(x);
+    x="我是變數";
+    //x被重複宣告,新宣告的資料會覆蓋掉舊宣告
+    alert(x);
+    var y=true;
+    // 宣告變數時順便把資料放進變數,直接寫在同一行
+
+    //運算子
+    //程式中的運算泛指對資料做任何的動作
+    15+20;
+    //單純寫出算式程式會做運算但會立即消失
+    alert(15+20);
+    //加上保留字或變數對程式來說才有意義
+    var result=15*15
+    //看到等號先看等號右方做運算,運算完成才會放進變數中
+    alert(result);
+    //這樣才可以印出變數中的值
+    //+-*/是常見的算術運算
+    //單元運算
+    result++;
+    alert(result);
+    //變數＋＋等於變數加一再把值丟回變數中
+    result--;
+    //變數--等於變數減一再把值丟回變數中
+    //上述單元運算相當於
+    result=result+1;
+    result=result-1;
+    alert(result);
+
+    //比較運算子
+    4>3;
+    result=4>3;
+    alert(result);
+    //看見等號先運算等號右邊;結果等於布林值true
+    result=4<3;
+    alert(result);
+    //看見等號先運算等號右邊;結果等於布林值false
+    //常見比較運算子>,<,>=,<=,==,==是在運算子前後是否完全相等
+    var data=3;
+    result=data*data;
+    alert(result);
+    alert(data);
+
+    //範例
+    //輸入,輸出,user用輸入接著程式進行運算再來user輸出
+    //輸入:prompt(提示語,預設值)括弧內填入提示語,預設值,預設值是只使用者不做動作也會有的值中間用逗號隔開
+    prompt("請輸入數字","0");
+    var n1=prompt("請輸入數字","1");
+    var n2=prompt("請輸入數字","1");
+    var result=n1*n2;
+    alert(result);
+    //使用者輸入完值後概念是值被帶入整個prompt的值
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

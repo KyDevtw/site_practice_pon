@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title> 
+    <script type="text/javascript">
+
+    function over(element){
+        element.style.color="red";
+
+    }
+
+    function out(element){
+        element.style.color="black";
+
+    }
+
+    </script>
+</head>
+<body>
+    <button onclick="alert('Clicked')">click</button>
+    <!-- onclick 點擊事件 -->
+    <span onmouseover="this.style.color='red';" onmouseout="this.style.color='black';">Test</span>
+    <!-- 事件處理的程式碼為on+事件名稱 -->
+    <!-- 任何標籤都能夠加上事件處理程式碼 -->
+    <!-- onmouseover是滑鼠移到區塊位置時 onmouseout為滑鼠移出區塊位置時 -->
+    <!-- 事件處理程式碼中可以使用this代表這個事件註冊的本身上的標籤（該物件） -->
+    <span onmouseover="over(this);" onmouseout="out(this);">Test</span>
+    <!-- 把事件寫在head內的javascript -->
+</body>
+</html>

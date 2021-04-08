@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Complicated</title>
+    <script type="text/javascript">
+    // 用javacsript的程式，動態的註冊事件處理器（註冊事件處理器就是把事件註冊在標籤上）
+
+
+    /* ---------比較舊式的寫法
+
+    function init(){
+        var btn=document.getElementById("btn");
+        // 透過document.getElementById把物件抓出來裝進變數
+        btn.onclick=function(){
+            alert("Clicked");
+        };
+        // 賦予這個變數onclick事件
+    }
+
+    比較舊式的寫法--------- */
+
+
+    function init(){
+        var btn=document.getElementById("btn");
+
+        var handle=function(){
+            alert("Clicked");
+        };
+        // 準備一個事件處理器（對應事件的函式）
+        btn.addEventListener("click", handle);
+        // .addEventListener 把btn變數與事件作關聯,第一個參數為事件的名稱,第二個參數為處理事件的函式變數
+
+        // 事件名稱要加上引號，函式變數不用加上引號
+
+    }
+
+
+    </script>
+</head>
+
+<body onload="init();">
+    <!-- onload當網頁載入body標籤時立刻執行init函式 -->
+    <button id="btn">click</button>
+    
+</body>
+
+</html>

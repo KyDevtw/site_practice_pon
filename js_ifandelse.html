@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+
+    <script>
+        /*
+           if(判斷){
+               如果判斷結果為true,則執行大括號中程式碼,反之則忽略此區塊
+           }
+        if (flase) {
+            alert("錯誤");
+        }
+
+        if (true) {
+            alert("正確");
+        }
+
+        */
+
+        var money = prompt("要提領多設金額", "");
+        if (money > 30000) {
+            alert("一天上限最高提領金額不得超過三萬元");
+        }
+
+        /*
+           if(判斷){
+               如果判斷結果為true,則執行大括號中程式碼,反之則忽略此區塊
+           }else{
+               如果判斷結果為false,則執行else大括弧內的程式碼
+           }
+        */
+        var money = prompt("要提領多設金額", "");
+        if (money > 30000) {
+            alert("一天上限最高提領金額不得超過三萬元");
+        }else{
+            alert("請儘速領取現鈔")
+        }
+
+        /*
+           if(判斷一){
+               如果判斷結果為true,則執行大括號中程式碼,反之則往else if判斷
+           }else if(判斷二){
+               如果判斷結果為false,則執行else if判斷二,可以重複else if判斷三以此類推,如果結果微ture則執行大括弧內的程式碼,反之執行else內的程式碼
+           }else{
+                如果前面判斷結果都為false,則執行else內的程式碼
+           }
+
+           
+        */
+
+        var n = prompt("要提領多設金額", "");
+        if (n > 500) {
+            alert("n+>500");
+        }else if(n>300){
+            alert("n>300");
+        }else{
+            alert(n>=300);
+        }
+
+        //範例
+
+        var n1=prompt("Pleae input a number","");
+        var n2=prompt("Pleae input a number","");
+        //資料型態轉換：把字串轉換為數字
+        n1=Number(n1);
+        n2=Number(n2);
+        //Number把字串轉換成為數字再丟回變數中
+        var op=prompt("Pleae input a symbol:+,-,*,/","");
+
+        var result;
+        if(op=="+"){
+            result=n1+n2;
+        }else if(op=="-"){
+            result=n1-n2;
+        }else if(op=="+"){
+            result=n1*n2;
+        }else if(op=="/"){
+            result=n1/n2;
+        }else{
+            alert("Please Make Sure You Input a Correct Number");
+        }
+        alert(result);
+
+
+
+    </script>
+    <script type=text/javascript>
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

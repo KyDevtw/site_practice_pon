@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+    <script type="text/javascript">
+    //內建函式
+    alert("Hello world");
+    //函式基礎
+    //瀏覽器會運算函式
+
+    //設計函式
+    function test(){
+        // 大括號內是函式本體,可以放入任何程式碼
+        // 函式的保留字是function
+        // function後接函式的取名加小括弧
+        // 大括弧內放函式本體
+        alert("Hello World")
+        // 函式寫好之後要呼叫函式才會執行
+    }
+    text();
+    // 呼叫函式要打出函式名稱加上小括號
+
+    // 函式運行原理是先設定函式,程式run到呼叫函式後跳回函式內執行,函式執行完畢後再跳回原程式區塊繼續執行
+    function test2(message /* 參數名稱 */){
+        alert(message);
+    }
+    text2("Hello World" /* 傳入函式的參數資料 */);
+    text2("Hello JS");
+
+
+    function add(n1,n2 /* 兩個參數中間要用逗號隔開 */){
+        alert(n1+n2);
+        return n1*n2;
+        // return會結束函式接著回傳到呼叫的位置,可以是參數也可是值
+    }
+    add(3,4 /* 傳入函式的參數資料 */);
+    add(10,15);
+
+    var result=add(3,4);
+    alert(result);
+    // 看到等號先運算等號右邊,進入函式運算,最後回傳還是內return的值給result
+
+    // 範例
+
+    var sum=0;
+    var n=1;
+    while(n<=50){
+        sum+=n;
+        n++;
+    }
+    alert(sum);
+
+    function getsum(max){
+        var sum=0;
+        var n=1;
+        while(n<=max){
+        sum+=n;
+        n++;
+        }
+        alert(sum);
+        return sum;
+    }
+
+    var result=alert(50)*getsum(100);
+    alert(result);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
