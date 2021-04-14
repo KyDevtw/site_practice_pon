@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <script type="text/javascript">
+        alert(window.screen.width + "x" + window.screen.height)
+
+        // 第一次示範事件觸發
+        // function change() {
+        //     window.document.body.innerHTML = 'Hello World!'
+        // }
+
+        // window.可以省略直接寫document
+        function change() {
+            const spanObj = window.document.getElementById('emotion')
+            spanObj.innerHTML = 'bad'
+            spanObj.style.color = 'red'
+            spanObj.style.fontWeight = 'bold'
+            spanObj.style.display = 'none'
+            // Javascript可以用DOM概念抓出style的屬性修改,多單字組合的屬性刪除-用小駝峰寫法代替
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div>It's a <span id="emotion">good</span> day.</div>
+
+    <button onclick="change()">Change</button>
+
+    <!-- https://www.youtube.com/watch?v=iZ3LfVujGCM -->
+    <!-- HTML DOM的各個節點，上層稱為父親節點(parent)下層稱為子節點(child)同層稱為兄弟節點(sibling) -->
+    <!-- html為階層結構,DOM對照過來為樹狀結構 -->
+    <div>
+        <img src="./js_dom.png" style="width: 100%;" alt="">
+
+    </div>
+
+</body>
+
+</html>
