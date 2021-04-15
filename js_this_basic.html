@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+
+
+</head>
+
+<body>
+
+    <script>
+
+        //this表函式的綁定物件,在不同程式碼脈絡之下this會表不同的物件
+
+
+        //獨立函式
+        function test() {
+            console.log(this) // this 在此程式中就是window物件
+            console.log(this.innerWidth) //印出視窗寬度
+        }
+        test()
+
+        //物件方法
+
+        let obj = {
+            x: 3 //物件的屬性與屬性值
+            test: function () {
+                console.log(this) //物件的屬性值為一個函式
+                console.log(this.x) //印出物件屬性值 x
+            }
+        }
+
+        obj.test() // 在物件的方法中this就是方法所屬的物件本身
+
+        //事件處理函式
+
+        document.addEventListener('click', function () {
+            console.log(this) // this為觸發事件的對象物件
+            this.body.innerHTML = 'Clicked'
+        })
+
+
+        //建構函式
+
+        function Point() {
+            console.log(this) // this為瀏覽器自動生成空白物件
+            this.x = 3
+            this.y = 4 //常見用法為用this.屬性=屬性值自動生成物件屬性回傳
+        }
+
+        let p1 = new Point() //建構函式就是呼叫時多加一個new
+        console.log(p1)
+
+        //在建構函式中建立想成立的物件
+
+
+
+
+
+    </script>
+</body>
+
+</html>

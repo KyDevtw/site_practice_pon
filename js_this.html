@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+
+    <script type="text/javascript">
+
+        function test() {
+            console.log(this)
+        }
+
+        text() //使用預設的綁定物件(這邊指的是window)
+
+        let test2 = test.bind({ x: 3 })
+        test2() //新的綁定物件是{ x:3 }
+        //.bind()可以重新綁定的物件回傳
+
+        let test3 = text.bind(document)
+        test3()
+
+        //functionName.apply(綁定物件,[參數資料,...])
+        //.apply()可以呼叫函式同時重新綁定物件,多參數資料時以陣列方式寫出
+
+        function add(n1, n2) {
+            console.log('結果', n1 + n2)
+            console.log('綁定物件', this)
+        }
+        add(3, 4) //基本函式呼叫方式
+
+        add.apply({ y: 4 }, [4, 5])//.apply示範,可以自己決定綁定物件
+
+        //functionName.call(綁定物件,參數資料,...])
+        //.call()可以呼叫函式同時重新綁定物件,多參數資料時以逗號隔開
+
+        add.call({ z: 10 }, 10, 4) //.call的參數跟一般呼叫函式方式相同
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
